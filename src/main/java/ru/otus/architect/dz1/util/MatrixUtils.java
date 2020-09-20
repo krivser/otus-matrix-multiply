@@ -1,7 +1,6 @@
 package ru.otus.architect.dz1.util;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Random;
 
 public class MatrixUtils {
@@ -82,6 +81,27 @@ public class MatrixUtils {
             printMatrix(fileWriter, resultMatrix);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void readMatrix(FileReader fileReader, int[][] matrix) {
+
+    }
+
+    public static void readAllMatrix(String fileName) throws IOException {
+        File file = new File(fileName);
+        BufferedReader br = null;
+
+        try {
+            br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+
+            String str;
+            if ((str = br.readLine()) != null) {
+
+            }
+
+        } finally {
+            if (br != null) br.close();
         }
     }
 }
